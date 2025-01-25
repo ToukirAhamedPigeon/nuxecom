@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-25',
+
   future: {
     compatibilityVersion: 4,
   },
+
   experimental: {
       scanPageMeta: 'after-resolve',
       sharedPrerenderData: false,
@@ -19,10 +21,17 @@ export default defineNuxtConfig({
         }
       }
   },
+
   unhead: {
     renderSSRHeadOptions: {
       omitLineBreaks: false
     }
   },
-  devtools: { enabled: true }
+
+  devtools: { enabled: true },
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+  shadcn: {
+    prefix: '',
+    componentDir: './app/components/ui'
+  }
 })
