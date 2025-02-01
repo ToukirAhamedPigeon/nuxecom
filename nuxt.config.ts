@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt'],
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt','@prisma/nuxt','@nuxthq/auth-utils'],
   shadcn: {
     prefix: '',
     componentDir: './app/components/ui'
