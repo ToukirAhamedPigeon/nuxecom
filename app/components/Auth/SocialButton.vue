@@ -1,5 +1,5 @@
 <template>
-    <Button type="button" variant="outline">
+    <Button @click="authenticate" type="button" variant="outline">
             <div class="flex items-center">
                 <Icon :icon="icon" class="mr-1 h-4 w-4"></Icon> {{ label }}
             </div>
@@ -12,6 +12,10 @@ defineProps<{
     label: string,
     icon: string
 }>()
+
+const authenticate = () => {
+    window.location.href = '/api/auth/github'
+}
 </script>
 
 <style scoped>
