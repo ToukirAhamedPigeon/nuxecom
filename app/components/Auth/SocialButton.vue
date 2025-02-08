@@ -14,7 +14,7 @@ defineProps<{
 }>()
 
 const authenticate = () => {
-    //window.location.href = '/api/auth/github'
+    window.location.href = '/api/auth/github'
 }
 </script>
 
