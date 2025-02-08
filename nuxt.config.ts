@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   experimental: {
       scanPageMeta: 'after-resolve',
       sharedPrerenderData: false,
+      componentIslands: true,
       compileTemplate: true,
       resetAsyncDataToUndefined: true,
       templateUtils: true,
