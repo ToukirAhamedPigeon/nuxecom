@@ -1,7 +1,0 @@
-{
-    "functions": {
-      "api/**/*.ts": {
-        "externalDependencies": ["@prisma/client", "prisma"]
-      }
-    }
-  }
