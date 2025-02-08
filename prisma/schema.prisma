@@ -7,15 +7,15 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum UserRole {
-  USER
-  ADMIN
-}
+// enum UserRole {
+//   USER
+//   ADMIN
+// }
 
 model User {
   id             String   @id @default(auto()) @map("_id") @db.ObjectId
   email          String   @unique
-  role           UserRole @default(USER)
+  role           String   @default("USER")  // Now using string instead of enum
   name           String?
   avatarUrl      String?
   hashedPassword String?
