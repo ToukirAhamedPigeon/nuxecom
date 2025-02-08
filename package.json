@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && if [ \"$PRISMA_SKIP_MIGRATIONS\" != \"true\" ]; then prisma migrate deploy; else echo 'Skipping Prisma migrations'; fi"
+    "postinstall": "nuxt prepare && prisma generate"
   },
   "dependencies": {
     "@iconify/vue": "^4.3.0",
