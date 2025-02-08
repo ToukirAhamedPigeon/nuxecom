@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && echo 'Skipping Prisma migrations on Vercel'"
+    "postinstall": "nuxt prepare && prisma generate"
   },
   "dependencies": {
     "@iconify/vue": "^4.3.0",
