@@ -1,5 +1,5 @@
 import { sanitizeUser } from '~~/server/utils/auth';
-import db from '../../../utils/db';
+import db from '~~/utils/db';
 export default defineOAuthGitHubEventHandler({
     config: {
       emailRequired: true
