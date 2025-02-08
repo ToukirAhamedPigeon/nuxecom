@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && node -e \"if (!process.env.VERCEL) require('child_process').execSync('prisma migrate deploy', {stdio: 'inherit'})\""
+    "postinstall": "nuxt prepare && if [ \"$PRISMA_APPLY_MIGRATIONS\" = \"true\" ]; then prisma migrate deploy; else echo 'Skipping Prisma migrations'; fi"
+
 
   },
   "dependencies": {
