@@ -7,9 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && if [ \"$PRISMA_APPLY_MIGRATIONS\" = \"true\" ]; then prisma migrate deploy; else echo 'Skipping Prisma migrations'; fi"
-
-
+   "postinstall": "nuxt prepare && if [ \"$VERCEL\" != \"1\" ]; then prisma generate; else echo 'Skipping Prisma migration on Vercel'; fi"
   },
   "dependencies": {
     "@iconify/vue": "^4.3.0",
