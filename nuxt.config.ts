@@ -1,11 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-25',
-
   future: {
     compatibilityVersion: 4,
   },
-
+  nitro: {
+    externals: {
+      inline: ['@prisma/client']
+    }
+  },
   experimental: {
       scanPageMeta: 'after-resolve',
       sharedPrerenderData: false,
