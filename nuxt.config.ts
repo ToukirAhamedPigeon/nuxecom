@@ -4,11 +4,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-  nitro: {
-    externals: {
-      inline: ['@prisma/client']
-    }
-  },
   experimental: {
       scanPageMeta: 'after-resolve',
       sharedPrerenderData: false,
